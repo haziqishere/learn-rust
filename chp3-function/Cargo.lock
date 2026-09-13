@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "chp1-primitives-dt"
+name = "chp3-function"
 version = "0.1.0"
