@@ -52,4 +52,24 @@ fn main() {
     let salut = String::from("Hello");
     let full_message: String = format!("{salam} {salut}");
     println!("{full_message}");
+
+    // 3) HashMap
+    // Type is HashMap<K,V> stores a mapping of KV
+
+    use std::collections::HashMap;
+    let mut scores: HashMap<String, i32> = HashMap::new();
+
+    // populate the hashmap
+    scores.insert(String::from("Blue"), 10);
+    scores.insert(String::from("Yellow"), 50);
+
+    // print entire hash map
+    for (key, value) in &scores {
+        println!("{key}: {value}");
+    }
+
+    // get value for specific key
+    let team_name = String::from("Blue");
+    let score = scores.get(&team_name).copied().unwrap_or(0);
+    println!("The score for team {team_name} is {score}");
 }
